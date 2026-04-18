@@ -1,0 +1,433 @@
+
+local G2L = {};
+
+-- StarterGui.TeleportGUI
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["SafeAreaCompatibility"] = Enum.SafeAreaCompatibility.None;
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+G2L["1"]["ClipToDeviceSafeArea"] = false;
+G2L["1"]["Name"] = [[TeleportGUI]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
+
+
+-- StarterGui.TeleportGUI.MainFrame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(182, 240, 255);
+G2L["2"]["Size"] = UDim2.new(0, 269, 0, 202);
+G2L["2"]["Position"] = UDim2.new(0.289, 0, 0.25138, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[MainFrame]];
+
+
+-- StarterGui.TeleportGUI.MainFrame.MainScript
+G2L["3"] = Instance.new("LocalScript", G2L["2"]);
+G2L["3"]["Name"] = [[MainScript]];
+
+
+-- StarterGui.TeleportGUI.MainFrame.PlayerNameBox
+G2L["4"] = Instance.new("TextBox", G2L["2"]);
+G2L["4"]["CursorPosition"] = -1;
+G2L["4"]["Name"] = [[PlayerNameBox]];
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextWrapped"] = true;
+G2L["4"]["TextSize"] = 14;
+G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["TextScaled"] = true;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(177, 178, 255);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["ClearTextOnFocus"] = false;
+G2L["4"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["4"]["Position"] = UDim2.new(0.06906, 0, 0.3432, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[Username]];
+
+
+-- StarterGui.TeleportGUI.MainFrame.PlayerNameBox.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.TeleportButton
+G2L["6"] = Instance.new("TextButton", G2L["2"]);
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextSize"] = 14;
+G2L["6"]["TextScaled"] = true;
+G2L["6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(69, 255, 0);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6"]["Size"] = UDim2.new(0, 200, 0, 29);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[Teleport]];
+G2L["6"]["Name"] = [[TeleportButton]];
+G2L["6"]["Position"] = UDim2.new(0.07332, 0, 0.58955, 0);
+
+
+-- StarterGui.TeleportGUI.MainFrame.TeleportButton.UICorner
+G2L["7"] = Instance.new("UICorner", G2L["6"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.Clear
+G2L["8"] = Instance.new("TextButton", G2L["2"]);
+G2L["8"]["TextWrapped"] = true;
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["TextScaled"] = true;
+G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8"]["Size"] = UDim2.new(0, 60, 0, 32);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[Clear]];
+G2L["8"]["Name"] = [[Clear]];
+G2L["8"]["Position"] = UDim2.new(0.06773, 0, 0.73144, 0);
+
+
+-- StarterGui.TeleportGUI.MainFrame.Clear.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["8"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["2"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.TextLabel
+G2L["b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["b"]["TextWrapped"] = true;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextSize"] = 14;
+G2L["b"]["TextScaled"] = true;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(182, 240, 255);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/DenkOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["b"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Size"] = UDim2.new(0, 234, 0, 45);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[TP / Teleport GUI]];
+G2L["b"]["Position"] = UDim2.new(0.02979, 0, 0.05446, 0);
+
+
+-- StarterGui.TeleportGUI.MainFrame.TextLabel
+G2L["c"] = Instance.new("TextLabel", G2L["2"]);
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextSize"] = 14;
+G2L["c"]["TextScaled"] = true;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(182, 240, 255);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Size"] = UDim2.new(0, 176, 0, 39);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[Username teleport player list. Working TP.]];
+G2L["c"]["Position"] = UDim2.new(0.30694, 0, 0.76282, 0);
+
+
+-- StarterGui.TeleportGUI.MainFrame.CloseButton
+G2L["d"] = Instance.new("TextButton", G2L["2"]);
+G2L["d"]["TextWrapped"] = true;
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["TextScaled"] = true;
+G2L["d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["Size"] = UDim2.new(0, 23, 0, 31);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[X]];
+G2L["d"]["Name"] = [[CloseButton]];
+G2L["d"]["Position"] = UDim2.new(0.9368, 0, 0, 0);
+
+
+-- StarterGui.TeleportGUI.MainFrame.CloseButton.UICorner
+G2L["e"] = Instance.new("UICorner", G2L["d"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.CloseButton.OpenCnfim
+G2L["f"] = Instance.new("LocalScript", G2L["d"]);
+G2L["f"]["Name"] = [[OpenCnfim]];
+
+
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame
+G2L["10"] = Instance.new("Frame", G2L["2"]);
+G2L["10"]["Visible"] = false;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(228, 255, 227);
+G2L["10"]["Size"] = UDim2.new(0, 317, 0, 183);
+G2L["10"]["Position"] = UDim2.new(-0.08922, 0, 0.0099, 0);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Name"] = [[ConfirmFrame]];
+
+
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame.YesButton
+G2L["11"] = Instance.new("TextButton", G2L["10"]);
+G2L["11"]["TextWrapped"] = true;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextSize"] = 14;
+G2L["11"]["TextScaled"] = true;
+G2L["11"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["Size"] = UDim2.new(0, 137, 0, 50);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Text"] = [[Yes?]];
+G2L["11"]["Name"] = [[YesButton]];
+G2L["11"]["Position"] = UDim2.new(0.03785, 0, 0.63934, 0);
+
+
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame.YesButton.UICorner
+G2L["12"] = Instance.new("UICorner", G2L["11"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame.NoButton
+G2L["13"] = Instance.new("TextButton", G2L["10"]);
+G2L["13"]["TextWrapped"] = true;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextSize"] = 14;
+G2L["13"]["TextScaled"] = true;
+G2L["13"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(78, 255, 0);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["Size"] = UDim2.new(0, 151, 0, 50);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[No]];
+G2L["13"]["Name"] = [[NoButton]];
+G2L["13"]["Position"] = UDim2.new(0.49527, 0, 0.63934, 0);
+
+
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame.NoButton.UICorner
+G2L["14"] = Instance.new("UICorner", G2L["13"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame.UICorner
+G2L["15"] = Instance.new("UICorner", G2L["10"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame.TextLabel
+G2L["16"] = Instance.new("TextLabel", G2L["10"]);
+G2L["16"]["TextWrapped"] = true;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["TextScaled"] = true;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Size"] = UDim2.new(0, 287, 0, 76);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[Who close yes or no?]];
+G2L["16"]["Position"] = UDim2.new(0.04101, 0, 0.15847, 0);
+
+
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame.TextLabel.UICorner
+G2L["17"] = Instance.new("UICorner", G2L["16"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame.Cnfirmclose
+G2L["18"] = Instance.new("LocalScript", G2L["10"]);
+G2L["18"]["Name"] = [[Cnfirmclose]];
+
+
+-- StarterGui.TeleportGUI.MinimizeButton
+G2L["19"] = Instance.new("TextButton", G2L["1"]);
+G2L["19"]["TextWrapped"] = true;
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["TextSize"] = 14;
+G2L["19"]["TextScaled"] = true;
+G2L["19"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(235, 251, 255);
+G2L["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["19"]["Size"] = UDim2.new(0, 112, 0, 32);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Text"] = [[TP GUI]];
+G2L["19"]["Name"] = [[MinimizeButton]];
+G2L["19"]["Position"] = UDim2.new(0.33754, 0, 0.21059, 0);
+
+
+-- StarterGui.TeleportGUI.MinimizeButton.MinimizeScript
+G2L["1a"] = Instance.new("LocalScript", G2L["19"]);
+G2L["1a"]["Name"] = [[MinimizeScript]];
+
+
+-- StarterGui.TeleportGUI.MinimizeButton.UICorner
+G2L["1b"] = Instance.new("UICorner", G2L["19"]);
+
+
+
+-- StarterGui.TeleportGUI.MainFrame.MainScript
+local function C_3()
+local script = G2L["3"];
+	local button = script.Parent.TeleportButton
+	local textbox = button.Parent:WaitForChild("PlayerNameBox")
+	local button1 = script.Parent.Clear
+	local textbox1 = button.Parent:WaitForChild("PlayerNameBox")
+	local frame = script.Parent.Parent.MainFrame
+	local UserInputService = game:GetService("UserInputService")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		local targetName = textbox.Text
+	
+		if targetName == "" then return end
+	
+		local targetPlayer = nil
+	
+		-- cari player tanpa peduli huruf besar/kecil
+		for _, player in pairs(Players:GetPlayers()) do
+			if string.lower(player.Name) == string.lower(targetName) then
+				targetPlayer = player
+				break
+			end
+		end
+	
+		if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
+			local targetHRP = targetPlayer.Character.HumanoidRootPart
+			local myCharacter = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+			local myHRP = myCharacter:WaitForChild("HumanoidRootPart")
+	
+			myHRP.CFrame = targetHRP.CFrame + Vector3.new(2,0,0)
+		else
+			warn("Player not found or not loaded")
+		end
+	end)
+	--clear
+	button1.MouseButton1Click:Connect(function()
+		textbox1.Text = ""
+	end)
+	
+	--Drag Gui Move--
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+	
+	
+end;
+task.spawn(C_3);
+-- StarterGui.TeleportGUI.MainFrame.CloseButton.OpenCnfim
+local function C_f()
+local script = G2L["f"];
+	local closeButton = script.Parent
+	local confirmFrame = script.Parent.Parent:WaitForChild("ConfirmFrame")
+	
+	closeButton.MouseButton1Click:Connect(function()
+		confirmFrame.Visible = true
+	end)
+	
+end;
+task.spawn(C_f);
+-- StarterGui.TeleportGUI.MainFrame.ConfirmFrame.Cnfirmclose
+local function C_18()
+local script = G2L["18"];
+	local frame = script.Parent
+	local TeleportGUI = script.Parent.Parent.Parent
+	local yesButton = frame:WaitForChild("YesButton")
+	local noButton = frame:WaitForChild("NoButton")
+	
+	
+	-- YES: close without saving
+	yesButton.MouseButton1Click:Connect(function()
+		TeleportGUI:Destroy()
+	end)
+	
+	-- NO: cancel
+	noButton.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+	
+end;
+task.spawn(C_18);
+-- StarterGui.TeleportGUI.MinimizeButton.MinimizeScript
+local function C_1a()
+local script = G2L["1a"];
+	local button = script.Parent.Parent.MinimizeButton
+	local frame = script.Parent.Parent.MainFrame
+	local UserInputService = game:GetService("UserInputService")
+	
+	button.MouseButton1Click:Connect(function()
+		frame.Visible = not frame.Visible
+	end)
+	--drag gui
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end;
+task.spawn(C_1a);
+
+return G2L["1"], require;
